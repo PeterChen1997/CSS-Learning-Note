@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            display: grid;
+            /* 调整布局 */
+            /* grid-template-columns: 70% 30%; */
+            grid-template-columns: repeat(3, 1fr); 
+            /* grid-template-columns: repeat(2, 1fr 2fr);  */
+            /* grid-template-columns: 1fr 1fr; */
+
+            /* 调整间距 */
+            /* grid-row-gap: 1em;
+            grid-column-gap: 1em;  */
+            grid-gap: 1em;
+
+            /* 调整高度 */
+            /* grid-auto-rows: 300px; */
+            grid-auto-rows: minmax(300px, auto);
+
+            /* 调整对齐 */
+            /* justify-content: center;
+            align-items: center; */
+        }
+
+        .content {
+            background-color: #eee;
+            padding: 1em;
+        }
+
+        .content:nth-child(odd) {
+            background-color: #ddd;
+        }
+
+        .content1 {
+            /* align-self: start; */
+            /* 行列对齐 */
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+        
+        .content2 {
+            align-self: end;
+        }
+
+        /* 局内局 */
+        .nested {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: minmax(100px, auto);
+            
+        }
+
+        .nested > div {
+            border: 1px solid #f7f7f7;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content content1">
+            <div class="nested">
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, mollitia.</div>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, mollitia.</div>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, mollitia.</div>
+            </div>
+        </div>
+        <div class="content content2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto consectetur, quisquam est, excepturi debitis officia
+            aperiam voluptas amet hic soluta autem ea tempora cupiditate incidunt alias voluptate nam! Illum nesciunt, amet
+            laborum ad aliquid cumque illo voluptates magnam veniam eum, quos recusandae beatae, accusamus delectus provident.
+            Assumenda tempora velit praesentium ducimus iusto vero vel dicta illum eaque, omnis maiores reprehenderit exercitationem
+            consequuntur doloremque, repudiandae consectetur dignissimos aspernatur cum aut voluptatibus temporibus! Quas
+            error consectetur nesciunt autem, id molestias distinctio facere.
+        </div>
+        <div class="content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto consectetur, quisquam est, excepturi debitis officia
+            aperiam voluptas amet hic soluta autem ea tempora cupiditate incidunt alias voluptate nam! Illum nesciunt, amet
+            laborum ad aliquid cumque illo voluptates magnam veniam eum, quos recusandae beatae, accusamus delectus provident.
+            Assumenda tempora velit praesentium ducimus iusto vero vel dicta illum eaque, omnis maiores reprehenderit exercitationem
+            consequuntur doloremque, repudiandae consectetur dignissimos aspernatur cum aut voluptatibus temporibus! Quas
+            error consectetur nesciunt autem, id molestias distinctio facere.
+        </div>
+        <div class="content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto consectetur, quisquam est, excepturi debitis officia
+            aperiam voluptas amet hic soluta autem ea tempora cupiditate incidunt alias voluptate nam! Illum nesciunt, amet
+            laborum ad aliquid cumque illo voluptates magnam veniam eum, quos recusandae beatae, accusamus delectus provident.
+            Assumenda tempora velit praesentium ducimus iusto vero vel dicta illum eaque, omnis maiores reprehenderit exercitationem
+            consequuntur doloremque, repudiandae consectetur dignissimos aspernatur cum aut voluptatibus temporibus! Quas
+            error consectetur nesciunt autem, id molestias distinctio facere.
+        </div>
+    </div>
+</body>
+
+</html>
