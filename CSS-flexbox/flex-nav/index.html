@@ -4,11 +4,18 @@
   <meta charset="UTF-8">
   <title>FlexBox Nav</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="build/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  
   <div class="wrapper">
+    
+    <header class="top">
+      <h1><a href="#">What The Flexbox?!</a></h1>
+    </header>
+
     <nav class="flex-nav">
+      <a href="#" class="toggleNav">☰ Menu</a>
       <ul>
         <li><a href="#">Item 01</a></li>
         <li><a href="#">Item 02</a></li>
@@ -31,7 +38,38 @@
       </ul>
     </nav>
 
+    <section class="hero">
+      <img src="http://115.159.6.187/backgroundImg/bg1.jpg">
+    </section>
+
+    <section class="details">
+      <p>A simple video course to help you master FlexBox.</p>
+      <p>Sign up today to grab all the videos and exercises!</p>
+    </section>
+
+    <section class="signup">
+      <form action="" class="signup">
+        <input type="text" placeholder="Your Name" style="width:150px;">
+        <input type="email" placeholder="Email Address" style="width:150px;">
+        <input type="submit" value="Sign me up!">
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; Wes Bos</p>
+    </footer>
+
+
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+    
+    $(function() {
+      $('.toggleNav').on('click',function() {
+        $('.flex-nav ul').toggleClass('open');
+      });
+    });
+  </script>
 </body>
 </html>
