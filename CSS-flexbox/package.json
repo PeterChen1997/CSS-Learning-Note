@@ -1,0 +1,16 @@
+{
+  "name": "css-flexbox",
+  "version": "1.0.0",
+  "description": "learning note",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peter Chen",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0"
+  }
+}
